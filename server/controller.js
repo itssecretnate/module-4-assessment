@@ -40,7 +40,8 @@ module.exports = {
     },
 
     updateName: (req, res) => {
-        const {oldName, newName} = req.body;
+        const {newName} = req.body;
+        const oldName = req.params.name;
       
         // Was running into problems sending headers more than once even with a return statement, so we're just hack this check in.
         let changedName = false;

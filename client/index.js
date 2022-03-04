@@ -44,7 +44,7 @@ document.getElementById("changeName").onsubmit = function (event) {
     let newName = document.getElementById("newName").value;
 
     let body = {
-        oldName, newName
+        newName
     }
 
     if(oldName === '' || newName === '') {
@@ -57,7 +57,7 @@ document.getElementById("changeName").onsubmit = function (event) {
         return;
     }
 
-    axios.put("http://localhost:4000/api/name/", body)
+    axios.put(`http://localhost:4000/api/name/${oldName}`, body)
         .then(function (response) {
         const data = response.data;
         alert(data);

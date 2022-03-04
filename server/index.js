@@ -19,7 +19,7 @@ app.get("/api/fortune", getFortune);
 app.post("/api/name", postName);
 
 // Update name in list
-app.put("/api/name", updateName);
+app.put("/api/name/:name", updateName);
 
 // Delete name in list
 app.delete("/api/name/:name", deleteName);
